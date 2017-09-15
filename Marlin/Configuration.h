@@ -779,7 +779,6 @@
 #define X_MIN_POS 0
 #define Y_MIN_POS 0
 #define Z_MIN_POS 0
-
 #define X_MAX_POS X_BED_SIZE
 #define Y_MAX_POS Y_BED_SIZE
 #define Z_MAX_POS 200
@@ -849,7 +848,7 @@
  */
 //#define AUTO_BED_LEVELING_3POINT
 //#define AUTO_BED_LEVELING_LINEAR
-//#define AUTO_BED_LEVELING_BILINEAR
+#define AUTO_BED_LEVELING_BILINEAR
 //#define AUTO_BED_LEVELING_UBL
 //#define MESH_BED_LEVELING
 
@@ -884,7 +883,6 @@
 
   // Probe along the Y axis, advancing X after each column
   //#define PROBE_Y_FIRST
-
 
   #if ENABLED(AUTO_BED_LEVELING_BILINEAR)
 
@@ -987,6 +985,7 @@
 // - If stepper drivers time out, it will need X and Y homing again before Z homing.
 // - Move the Z probe (or nozzle) to a defined XY point before Z Homing when homing all axes (G28).
 // - Prevent Z homing when the Z probe is outside bed area.
+//
 #define Z_SAFE_HOMING
 
 #if ENABLED(Z_SAFE_HOMING)
